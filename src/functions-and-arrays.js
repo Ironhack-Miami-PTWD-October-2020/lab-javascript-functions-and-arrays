@@ -137,6 +137,21 @@ const wordsArr = [
   "palace",
 ];
 
+// define a fn
+function averageWordLength(arr) {
+  // check for empty arr and ret null
+  if (arr.length === 0) return null;
+  // var for totalLen
+  let totalLength = 0;
+  // iterate over arr
+  for (let i = 0; i < arr.length; i++) {
+    // to add the length of each word to sum
+    totalLength += arr[i].length;
+  }
+  // return sum divided by length of the arr
+  return totalLength / arr.length;
+}
+
 // Iteration #5: Unique arrays
 const wordsUnique = [
   "crab",
@@ -152,6 +167,23 @@ const wordsUnique = [
   "bring",
 ];
 
+// def fn
+function uniquifyArray(arr) {
+  if (arr.length === 0) return null;
+  // create a newArr []
+  let uniqueArr = [];
+  // loop over arr with for
+  for (let i = 0; i < arr.length; i++) {
+    // check if the newArr contains the element we are iterating over and if not store it in the newArr
+    if (uniqueArr.indexOf(arr[i]) === -1) {
+      // add elements to the new arr
+      uniqueArr.push(arr[i]);
+    }
+  }
+  // return newArr
+  return uniqueArr;
+}
+
 // Iteration #6: Find elements
 const wordsFind = [
   "machine",
@@ -163,6 +195,21 @@ const wordsFind = [
   "truth",
   "disobedience",
 ];
+
+// def fn
+function doesWordExist(arr, word) {
+  if (arr.length === 0) return null;
+  // for loop iterate
+  for (let i = 0; i < arr.length; i++) {
+    // check if the word === the word we are currently iterating over - return true
+    if (word === arr[i]) {
+      return true;
+    }
+  }
+  // return false
+  return false;
+  // return arr.includes(word);
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -178,6 +225,20 @@ const wordsCount = [
   "disobedience",
   "matter",
 ];
+
+// def fn
+function howManyTimes(arr, word) {
+  // declare count = 0
+  let count = 0;
+  // iterate over each word if it matches the word we inc count
+  for (elem of arr) {
+    if (word === elem) {
+      count++;
+    }
+  }
+  // return count
+  return count;
+}
 
 // Iteration #8: Bonus
 
